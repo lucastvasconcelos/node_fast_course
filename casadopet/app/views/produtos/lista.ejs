@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <table border="1px">
+            <tr>
+                <td>id</td>
+                <td>nome</td>
+                <td>tipoAnimal</td>
+                <td>idade</td>
+                <td>valor</td>
+            </tr>
+            <%for (elemento of lista) {%>
+            <tr>
+                <td><%=elemento.id%></td>
+                <td><%=elemento.nome%></td>
+                <td><%=elemento.tipoAnimal%></td>
+                <td><%=elemento.idade%></td>
+                <td><%=elemento.valor%></td>
+            </tr>
+            <%}%>
+            <tr></tr>
+        </table>
+        <a href="/">Clique aqui</a>
+        <button><a href="/produtos/form">cadastrar novo animal</a></button>
+    </body>
+</html>
