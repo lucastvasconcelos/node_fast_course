@@ -2,8 +2,8 @@ const mysql = require("mysql")
 criarConexaoDB = () => {
     return mysql.createConnection({
         host:"localhost",
-        user:"root",
-        password:"",
+        user:"lucas",
+        password:"lucas",
         database: "casadopet"
     })
 }
