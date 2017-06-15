@@ -28,8 +28,10 @@ module.exports = (app) => {
         let erros = req.validationErrors()
         console.log(erros)
         if (erros){
-            res.render("produtos/form.ejs",{erros:erros})
-            return;
+            res.format({
+            html : () => res.status(400).render("produtos/form.ejs",{erros:erros}),
+            json : () => res.status(400).json(erros)
+            })
         } 
 
         //controller post

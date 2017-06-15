@@ -18,7 +18,7 @@ let client = http.request(configuracao, (res) => {
     })
 })
 let animal = {
-    nome: "Gilbertinho",
+    nome: "",
     tipoAnimal: "Tartaruguinha",
     idade: 2,
     valor: 10.20
