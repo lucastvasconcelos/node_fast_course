@@ -8,6 +8,9 @@ class ProdutosDAO{
     salva(requisicao,callback){
         this._connection.query("insert into animal set ?",requisicao,callback)
     }
+    exclui(nome,callback){
+      this._connection.query("delete from animal where nome = ?",nome,callback)
+    }
 }
 
 module.exports = () => {

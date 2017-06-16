@@ -1,13 +1,23 @@
 const mysql = require("mysql")
 criarConexaoDB = () => {
-    return mysql.createConnection({
-        host:"localhost",
-        user:"lucas",
-        password:"lucas",
-        database: "casadopet"
-    })
-}
+    	if(!process.env.NODE_ENV){
+	        return mysql.createConnection({
+   	        host:"localhost",
+	        user:"root",
+	        password:"lucas",
+	        database: "casadopet"
+    		})
+		}
+    	if(process.env.NODE_ENV="test"){
+			return mysql.createConnection({
+        	host:"localhost",
+	        user:"root",
+	        password:"lucas",
+	        database: "casadopet_test"
+    		})
+    	}
+    }
 
 module.exports = () => {
     return criarConexaoDB
-}
+	}
